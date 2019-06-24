@@ -1,3 +1,1 @@
-# test
-echo "syc kfk";
-date;
+# No word
