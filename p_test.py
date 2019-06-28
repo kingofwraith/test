@@ -2,7 +2,6 @@ import time;
 import datetime;
 import os;
 
-
 print("=-=- syc learning python -=-=");
 
 while True:
@@ -14,11 +13,11 @@ while True:
 print("\n:::: [END]");
 
 
+#测试控制命令行
 while True:
     t1= input("测试一行命令: \n>>>");
     if t1=="exit" or t1=="logout":
         break;
     print(os.system(t1));
 print("\n:::: [END]");
-
 
