@@ -1,0 +1,5 @@
+#python 命令行操作：
+    # *.py 文件内
+    import os
+    print(os.system(input("write commande \n >>> ")))
+运行后，即可进行命令行操作
