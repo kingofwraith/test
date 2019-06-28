@@ -1,0 +1,14 @@
+set username and email
+	git config --global user.name "name"
+	git config --global user.email "email"
+
+set remote
+	git remote add origin(or othername) git@github.com:name/yourRepo.git
+
+show config information
+	git config --list
+
+set ssh
+	us command: ssh-keygen
+	set ssh password as you need
+	save the information of "id_rsa.pub" to your github's sercitysetting
