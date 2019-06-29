@@ -12,3 +12,6 @@ set ssh
 	us command: ssh-keygen
 	set ssh password as you need
 	save the information of "id_rsa.pub" to your github's sercitysetting
+
+git 彩色输出
+    git config color.ui true
