@@ -15,3 +15,8 @@ set ssh
 
 git 彩色输出
     git config color.ui true
+
+clone
+    git clone git@github.com:username/yourRepo.git
+    OR
+    git clone username@host:yourRepoPath.git
