@@ -18,5 +18,3 @@ git 彩色输出
 
 clone
     git clone git@github.com:username/yourRepo.git
-    OR
-    git clone username@host:yourRepoPath.git
