@@ -1,0 +1,13 @@
+# Use FTP
+
+Install vsftpd
+    yum -y install vsftpd
+
+start vsftpd
+    systemctl start vsftpd
+    ### make service script
+        systemctl enable vsftpd
+
+查看vsftpd配置文件位置
+    rpm -qc vsftpd
+
