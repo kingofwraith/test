@@ -7,7 +7,8 @@ set number
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab / expandtab
+set expandtab
+
 
     说明:
     tabstop 表示一个 tab 显示出来是多少个空格的长度，默认 8。
