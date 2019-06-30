@@ -1,4 +1,4 @@
-# Use FTP
+## Use FTP
 
 Install vsftpd
     yum -y install vsftpd
