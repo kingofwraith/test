@@ -1,5 +1,21 @@
+#安装pip ；install pip
+    ##download pip
+        >>> wget https://bootstrap.pypa.io/get-pip.py
+    ## install
+        >>> python get-pip.py
+        the file(get-pip.py) in my REPO:/tools/get-pip.py  downloaded at 2019-6-30
+
 #python 命令行操作：
-    # *.py 文件内
+    ## *.py 文件内
     import os
     print(os.system(input("write commande \n >>> ")))
+    ##system()无法进行返回文字调用
+    ##popen()返回命令的结果{file reade}对象
+    
 运行后，即可进行命令行操作
+
+#用pexpect实现自动回复命令行
+    #install pexpect
+    pip install pexpect
+    #使用 in *.py
+    
