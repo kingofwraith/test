@@ -1,0 +1,10 @@
+#改服务器HOSTNAME
+    uname -a 查看hostname
+    hostname newname 修改下，让hostname立刻生效。
+    vi /etc/hosts 修改原hostname为 newname
+    vi /etc/sysconfig/network 修改原hostname为
+    newname , reboot重启后也生效
+
+#结束进程
+    kill -9 [pid]
+    kill -l 查看命令编号意义
