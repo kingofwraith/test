@@ -7,8 +7,7 @@ os.system("date>>"+logfile+";echo 'FROM: cmd.py'>>"+logfile);
 
 if len(sys.argv)>1:
 	os.system("echo 'COMMAND: '"+sys.argv[1]+">>"+logfile);
-	command=sys.argv[1]+" \& 1>>"+logfile+" 2>\&1";
-    print(command)
+    os.system(sys.argv[1]);
 else:
-	os.system("echo 'ERROR: no commands'>>"+logfile);
+	os.system("echo 'ERROR: no command'>>"+logfile);
     
