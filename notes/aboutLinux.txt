@@ -9,5 +9,8 @@
     kill -9 [pid]
     kill -l 查看命令编号意义
 
-#for strin strout strerr
-    #>l -al 1>>logfile 2>&1 &
+#for strin strout strerr 服务器后台运行，并且ssh登出后不停止
+    #>nohup l -al 1>>logfile 2>&1 &
+
+#screen用法
+    #
