@@ -1,13 +1,22 @@
-#!/usr/bin/env python
+#!usr/bin/env python
 #-*-coding:utf-8-*-
-import os,sys;
+import os;
+import sys;
 
-logfile="work.log"
-os.system("date>>"+logfile+";echo 'FROM: cmd.py'>>"+logfile);
+myargv=sys.argv;
 
-if len(sys.argv)>1:
-	os.system("echo 'COMMAND: '"+sys.argv[1]+">>"+logfile);
-    os.system(sys.argv[1]);
-else:
-	os.system("echo 'ERROR: no command'>>"+logfile);
-    
+def cmd():
+    logfile="work.log"
+    os.system("echo '=========='>>"+logfile);
+    os.system("date>>"+logfile+";echo 'FROM: cmd.py'>>"+logfile);
+
+    if len(myargv)>1:
+        print(myargv[1])
+        os.system("echo 'COMMAND: '>>"+logfile);
+        os.system("echo '"+myargv[1]+"'>>"+logfile);
+
+        os.system(myargv[1]);
+    else:
+        os.system("echo 'ERROR: no command'>>"+logfile);
+
+cmd();

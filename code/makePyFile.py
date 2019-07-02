@@ -12,6 +12,7 @@ if len(sys.argv)>2:
 
 
 #write logfile
+os.system("echo '=========='>>"+logfile);
 os.system("date>>"+logfile);
 log=open(logfile,"a");
 log.write("FROM::: makePyFile.py \r\nSTR:::: make file:"+fileName+".py \r\n");
