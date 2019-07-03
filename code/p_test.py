@@ -8,6 +8,8 @@ import os;
 
 print("=-=- syc learning python -=-=");
 
-for i in range(10):
+for i in range(5):
     time.sleep(5);
+    
+    os.system("echo "+i+">>testlog");
     os.system("date>>testlog");

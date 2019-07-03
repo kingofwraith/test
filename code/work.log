@@ -22,3 +22,18 @@ Tue Jul  2 11:08:26 CST 2019
 FROM::: makePyFile.py 
 STR:::: make file:default.py 
 END:::: create default.py
+==========
+2019年 07月 02日 星期二 20:34:57 CST
+FROM: cmd.py
+COMMAND: 
+python p_test.py
+==========
+2019年 07月 02日 星期二 20:39:49 CST
+FROM: cmd.py
+COMMAND: 
+nohup python p_test.py 1>>testlog 2>&1 &
+==========
+2019年 07月 02日 星期二 20:43:30 CST
+FROM::: makePyFile.py 
+STR:::: make file:default.py 
+END:::: create default.py
