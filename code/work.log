@@ -37,3 +37,47 @@ nohup python p_test.py 1>>testlog 2>&1 &
 FROM::: makePyFile.py 
 STR:::: make file:default.py 
 END:::: create default.py
+==========
+Wed Jul  3 20:05:02 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:default.py 
+END:::: create default.py
+==========
+Wed Jul  3 20:06:02 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:default.py 
+END:::: create default.py
+==========
+Wed Jul  3 20:07:56 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:default.py 
+END:::: create default.py
+==========
+Wed Jul  3 20:09:15 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:default.py 
+END:::: create default.py
+==========
+Wed Jul  3 20:10:09 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:default.py 
+END:::: create default.py
+==========
+Wed Jul  3 20:12:47 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:defaultsyc.py 
+END:::: create defaultsyc.py
+==========
+Wed Jul  3 20:19:15 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:defaultsyc.py 
+==========
+Wed Jul  3 20:21:32 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:defaultsyc.py 
+END:::: create defaultsyc.py
+==========
+Wed Jul  3 20:21:41 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:defaultsyc.py 
+END:::: create defaultsyc.py
