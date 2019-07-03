@@ -3,3 +3,8 @@ Wed Jul  3 20:30:03 CST 2019
 FROM::: makePyFile.py 
 STR:::: make file:defaultsyc.py 
 END:::: create defaultsyc.py
+==========
+Wed Jul  3 20:33:51 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:setVim.py 
+END:::: create setVim.py
