@@ -2,6 +2,9 @@
 #-*-coding:utf-8-*-
 import os,sys,pexpect;
 
+
+inargv=sys.argv;    #get ip and password from command opition
+
 startword=['#','>>>','>','\$'];
 def send_cmd(child,cmd):
     child.sendline(cmd);
@@ -28,9 +31,9 @@ def connect_ssh(user,host,pwd):
 
 
 def main():
-    host='47.103.18.72';
+    host=inargv[1];    #ip
     user='root';
-    pwd='Syc778899';
+    pwd=inargv[2];    #password
     child=connect_ssh(user,host,pwd);
     send_cmd(child,'ll');
     send_cmd(child,'cd mycode;ll');
