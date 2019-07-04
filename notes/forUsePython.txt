@@ -4,6 +4,10 @@
     ## install
         >>> python get-pip.py
         the file(get-pip.py) in my REPO:/tools/get-pip.py  downloaded at 2019-6-30
+    ## upgrade pip
+        >>> python -m pip install --upgrade pip
+    ##show pip's version
+        >>> pip show pip
 
 #python 命令行操作：
     ## *.py 文件内
