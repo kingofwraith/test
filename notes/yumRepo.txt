@@ -7,6 +7,18 @@
     # CentOS 7
     wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
-#use command
+#use command to update Repo
 
     yum makecache
+
+#show work history
+
+    yum history
+
+#show instrall list
+
+    yum search
+    yum list update
+    yum list installed
+    #show instrall not in Repo
+        yum list extras
