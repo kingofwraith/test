@@ -13,7 +13,7 @@ def sycGit():
     key="_rsa";
     child=pexpect.spawn(commd);
     child.logfile=worklog;
-    
+    #child.timeout=300
     ret=child.expect([pexpect.TIMEOUT,pexpect.EOF,key]);
     if ret==0:
         print ":: ERROR :: TIMEOUT";
