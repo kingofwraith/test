@@ -6,7 +6,7 @@ startword=['#','>>>','>','\$'];
 
 # use pexpect to work
 def sycGit():
-    commd="git pull origin master";
+    commd="git push origin master";
     # write work log
     worklog=open("sycGit.log","w");
     # keywords of ssh_key
