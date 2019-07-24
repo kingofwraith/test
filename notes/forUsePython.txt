@@ -1,3 +1,21 @@
+#编辑工具，简介地址：https://blog.csdn.net/weixin_38233274/article/details/80327571
+    ##1 终端工具：Upterm
+    公司：railsware
+    简介：全平台终端，原始名字BlackWindow
+
+    ##2 交互式解释器：Ptpython
+    公司：jonathanslenders
+    简介：交互式python解释器，支持语法高亮
+
+    ##3 包管理工具：Anaconda
+    简介：管理python环境，pip包，常用库，配置好的环境路径。配合自家JIT解释器《Numba》可提高科学计算效率
+
+    ##4 编辑器：Sublime3
+    简介：比PyCharm轻量级，配合Anaconda插件，可以整合成简单IDE
+
+    ##5 在线前端开发编辑器：CodeSandbox
+    简介：这是前端环境开发工具，包含React、Vue等前端框架
+
 #安装pip ；install pip
     ##download pip
         >>> wget https://bootstrap.pypa.io/get-pip.py
