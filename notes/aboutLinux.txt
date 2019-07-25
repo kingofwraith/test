@@ -12,5 +12,11 @@
 #for strin strout strerr 服务器后台运行，并且ssh登出后不停止
     #>nohup l -al 1>>logfile 2>&1 &
 
+#查看时间
+    date
+
+#查看日历
+    cal
+
 #screen用法
     #
