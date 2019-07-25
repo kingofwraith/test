@@ -50,5 +50,13 @@ Add word follow the end of file.
     :/zifu
     下一个"n",上一个"#" 
 
+#翻页
+    ctrl+f,ctrl+b : 上下翻一页
+    ctrl+d,ctrl+u : 上下翻半页
+
+#撤销
+    u 撤销上次操作
+    ctrl+r 恢复撤销的操作
+
 
 
