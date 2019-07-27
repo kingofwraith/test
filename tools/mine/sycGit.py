@@ -33,24 +33,9 @@ def sycGit2():
     #check time to logfile
     os.system("echo '----------'>>"+logfilename+";date>>"+logfilename+";echo '------'>>"+logfilename);
     
-    child=pexpect.spawn("ls -al");
-    child.logfile=worklog;
-    
-    #log which file is changed
-    commd="git commit";
-    child=pexpect.spawn(commd);
-    child.logfile=worklog;
-    print ":: LIST log::";
-    
-    commd="git add --all";
-    child=pexpect.spawn(commd);
-    child.logfile=worklog;
-    print ":: WORKED :: 'git add *' ";
-    
-    commd="git commit -m 'auto upload by python'";
-    child=pexpect.spawn(commd);
-    child.logfile=worklog;
-    print ":: WORKED :: 'git commit'";
+    os.system("git commit>>"+logfilename);
+    os.system('git add -A');
+    os.system("git commit -m 'auto upload by python'");
     
     #push to master
     commd="git push origin master";
