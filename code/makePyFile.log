@@ -13,3 +13,8 @@ Fri Jul 12 14:58:25 CST 2019
 FROM::: makePyFile.py 
 STR:::: make file:sycGit.py 
 END:::: create sycGit.py
+==========
+Sat Jul 27 12:36:02 CST 2019
+FROM::: makePyFile.py 
+STR:::: make file:sendEmail.py 
+END:::: create sendEmail.py
