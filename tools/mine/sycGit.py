@@ -29,6 +29,14 @@ def sycGit():
 def sycGit2():
     # write work log
     worklog=open("sycGit.log","a");
+    #check time to logfile
+    os.system("echo '----------'>>sycGit.log;date>>sycGit.log;echo '------'>>sycGit.log");
+    
+    #log which file is changed
+    commd="git commit";
+    child=pexpect.spawn(commd);
+    child.logfile=worklog;
+    print ":: LIST log::";
     
     commd="git add *";
     child=pexpect.spawn(commd);
@@ -40,6 +48,7 @@ def sycGit2():
     child.logfile=worklog;
     print ":: WORKED :: 'git commit'";
     
+    #push to master
     commd="git push origin master";
     child=pexpect.spawn(commd);
     child.logfile=worklog;
