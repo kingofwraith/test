@@ -33,11 +33,7 @@ def sycGit2():
     commd="git add *";
     child=pexpect.spawn(commd);
     child.logfile=worklog;
-    
-    #child.timeout=300;
-    ret=child.expect('# ');
-    if ret==0:
-        print ":: WORKED :: 'git add *' ";
+    print ":: WORKED :: 'git add *' ";
     
     commd="git commit -m 'auto upload by python'";
     child=pexpect.spawn(commd);
@@ -54,11 +50,21 @@ def sycGit2():
         print ":: ERROR :: TIMEOUT";
     if ret==1:
         child.sendline("sycsyc");
+        child.logfile=worklog;
         print ":: WORKED :: 'git ssh pwd'";
-        ret1=child.expect([pexpect,TIMEOUT,'# ']);
-
-
+        ret1=child.expect([pexpect,TIMEOUT,'completed','Everything']);
+        if ret1==0:
+            print ":: ERROR :: TIMEOUT";
+        if ret1==1:
+            print ":: WORKED :: 'git push ok'";
+        if ret1==2:
+            print ":: WORKED :: nothing to upload";
     worklog.close();
 
-#sycGit();
-sycGit2();
+
+def main():
+    #sycGit();
+    sycGit2();
+
+if __name__=='__main__':
+    main();
