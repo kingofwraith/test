@@ -8,12 +8,12 @@ startword=['#','>>>','>','\$'];
 def sycGit():
     commd="git push origin master";
     # write work log
-    worklog=open("sycGit.log","w");
+    worklog=open("sycGit.log","a");
     # keywords of ssh_key
     key="_rsa";
     child=pexpect.spawn(commd);
     child.logfile=worklog;
-    #child.timeout=300
+    #child.timeout=300;
     ret=child.expect([pexpect.TIMEOUT,pexpect.EOF,key]);
     if ret==0:
         print ":: ERROR :: TIMEOUT";
@@ -27,21 +27,37 @@ def sycGit():
 
 
 def sycGit2():
-    commd="git add *";
     # write work log
-    worklog=open("sycGit.log","w");
+    worklog=open("sycGit.log","a");
     
+    commd="git add *";
     child=pexpect.spawn(commd);
     child.logfile=worklog;
     
-    #child.timeout=300
-    ret=child.expect([pexpect.TIMEOUT,pexpect.EOF,startword]);
+    #child.timeout=300;
+    ret=child.expect('# ');
+    if ret==0:
+        print ":: WORKED :: 'git add *' ";
+    
+    commd="git commit -m 'auto upload by python'";
+    child=pexpect.spawn(commd);
+    child.logfile=worklog;
+    print ":: WORKED :: 'git commit'";
+    
+    commd="git push origin master";
+    child=pexpect.spawn(commd);
+    child.logfile=worklog;
+    
+    child.timeout=300;
+    ret=child.expect([pexpect.TIMEOUT,'_rsa']);
     if ret==0:
         print ":: ERROR :: TIMEOUT";
     if ret==1:
-        print ":: ERROR :: EOF";
-    if ret==2:
-        print ":: WORKED :: 'get add *' ";
+        child.sendline("sycsyc");
+        print ":: WORKED :: 'git ssh pwd'";
+        ret1=child.expect([pexpect,TIMEOUT,'# ']);
+
+
     worklog.close();
 
 #sycGit();
