@@ -25,8 +25,24 @@ def sycGit():
         child.logfile=worklog;
     worklog.close();
 
-# use os.system to work
-def sycGit2():
-    commd="git pull origin master";
 
-sycGit();
+def sycGit2():
+    commd="git add *";
+    # write work log
+    worklog=open("sycGit.log","w");
+    
+    child=pexpect.spawn(commd);
+    child.logfile=worklog;
+    
+    #child.timeout=300
+    ret=child.expect([pexpect.TIMEOUT,pexpect.EOF,startword]);
+    if ret==0:
+        print ":: ERROR :: TIMEOUT";
+    if ret==1:
+        print ":: ERROR :: EOF";
+    if ret==2:
+        print ":: WORKED :: 'get add *' ";
+    worklog.close();
+
+#sycGit();
+sycGit2();
