@@ -28,30 +28,34 @@ def sycGit():
 
 def sycGit2():
     # write work log
-    worklog=open("sycGit.log","a");
+    logfilename="sycGit.log";
+    worklog=open(logfilename,"a");
     #check time to logfile
-    os.system("echo '----------'>>sycGit.log;date>>sycGit.log;echo '------'>>sycGit.log");
+    os.system("echo '----------'>>"+logfilename+";date>>"+logfilename+";echo '------'>>"+logfilename);
+    
+    child=pexpect.spawn("ls -alh");
+    child.logfile=worklog;
     
     #log which file is changed
     commd="git commit";
-    child=pexpect.spawn(commd);
-    child.logfile=worklog;
+    child=pexpect.spawn(commd,logfile=sys.stdout);
+    #child.logfile=worklog;
     print ":: LIST log::";
     
     commd="git add *";
     child=pexpect.spawn(commd);
-    child.logfile=worklog;
+    #child.logfile=worklog;
     print ":: WORKED :: 'git add *' ";
     
     commd="git commit -m 'auto upload by python'";
     child=pexpect.spawn(commd);
-    child.logfile=worklog;
+    #child.logfile=worklog;
     print ":: WORKED :: 'git commit'";
     
     #push to master
     commd="git push origin master";
     child=pexpect.spawn(commd);
-    child.logfile=worklog;
+    #child.logfile=worklog;
     
     child.timeout=300;
     ret=child.expect([pexpect.TIMEOUT,'_rsa']);
@@ -59,7 +63,7 @@ def sycGit2():
         print ":: ERROR :: TIMEOUT";
     if ret==1:
         child.sendline("sycsyc");
-        child.logfile=worklog;
+        #child.logfile=worklog;
         print ":: WORKED :: 'git ssh pwd'";
         ret1=child.expect([pexpect.TIMEOUT,'completed','Everything']);
         if ret1==0:
