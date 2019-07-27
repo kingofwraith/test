@@ -7,3 +7,4 @@ drwxr-xr-x 3 root root 4.0K Jul  9 16:04 ..
 -rw-r--r-- 1 root root    0 Jul 27 22:20 sycGit.log
 -rwxr--r-- 1 root root  979 Jul 27 22:20 sycGit.py
 -rwxr-xr-x 1 root root 1.1K Jul  4 19:50 sycSsh.py
+Enter passphrase for key '/root/.ssh/id_rsa': sycsyc
