@@ -35,7 +35,8 @@ def sycGit2():
     
     os.system("git commit>>"+logfilename);
     os.system('git add -A');
-    os.system("git commit -m 'auto upload by python'");
+    os.system("git commit -m 'auto upload by python'>>"+logfilename);
+    print ":: WORKED :: 'git add + commit'";
     
     #push to master
     commd="git push origin master";
@@ -45,14 +46,14 @@ def sycGit2():
     child.timeout=300;
     ret=child.expect([pexpect.TIMEOUT,'_rsa']);
     if ret==0:
-        print ":: ERROR :: TIMEOUT";
+        print ":: ERROR :: ssh_key TIMEOUT";
     if ret==1:
         child.sendline("sycsyc");
         child.logfile=worklog;
         print ":: WORKED :: 'git ssh pwd'";
         ret1=child.expect([pexpect.TIMEOUT,'-> master','Everything']);
         if ret1==0:
-            print ":: ERROR :: TIMEOUT";
+            print ":: ERROR :: push TIMEOUT";
         if ret1==1:
             print ":: WORKED :: 'git push ok'";
         if ret1==2:
