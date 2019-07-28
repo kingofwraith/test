@@ -50,7 +50,7 @@ def sycGit2():
         child.sendline("sycsyc");
         child.logfile=worklog;
         print ":: WORKED :: 'git ssh pwd'";
-        ret1=child.expect([pexpect.TIMEOUT,'completed','Everything']);
+        ret1=child.expect([pexpect.TIMEOUT,'-> master','Everything']);
         if ret1==0:
             print ":: ERROR :: TIMEOUT";
         if ret1==1:
