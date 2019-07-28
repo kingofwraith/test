@@ -9,7 +9,7 @@ startword=['#','>>>','>','\$'];
 def sycGit():
     commd="git pull origin master";
     # write work log
-    worklog=open("/root/sycGit.log","a");
+    worklog=open("/root/logs/sycGit.log","a");
     # keywords of ssh_key
     key="_rsa";
     child=pexpect.spawn(commd);
@@ -29,7 +29,7 @@ def sycGit():
 # git push
 def sycGit2():
     # write work log
-    logfilename="/root/sycGit.log";
+    logfilename="/root/logs/sycGit.log";
     worklog=open(logfilename,"a");
     #check time to logfile
     os.system("echo '----------'>>"+logfilename+";date>>"+logfilename+";echo '------'>>"+logfilename);

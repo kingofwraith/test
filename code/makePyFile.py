@@ -2,7 +2,7 @@
 #-*-coding:utf-8-*-
 import sys,os
 
-logfile="makePyFile.log";
+logfile="/root/logs/makePyFile.log";
 fileName="defaultsyc";
 pathin=None;
 
@@ -25,7 +25,8 @@ log.close();
 
 # the top words in "*.py" file
 toplist=["#!/usr/bin/env python\n","#-*-coding:utf-8-*-\n","\n\n\n"];
-deflist=["def "+fileName+"():\n","    intmp=None;\n","\n\n","#"+fileName+"();\n"];
+deflist=["def "+fileName+"():\n","    intmp=None;\n","#"+fileName+"();\n\n\n"];
+mainlist=["def main():\n","    #"+fileName+"();\n\n","if __name__=='__main__':\n","    main();\n"];
 
 myfile=None;
 if pathin==None:
@@ -35,6 +36,7 @@ else:
 
 myfile.writelines(toplist);
 myfile.writelines(deflist);
+myfile.writelines(mainlist);
 
 myfile.close();
 
