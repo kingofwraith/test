@@ -5,6 +5,7 @@ import os,sys,pexpect;
 startword=['#','>>>','>','\$'];
 
 # use pexpect to work
+# git pull
 def sycGit():
     commd="git pull origin master";
     # write work log
@@ -25,7 +26,7 @@ def sycGit():
         child.logfile=worklog;
     worklog.close();
 
-
+# git push
 def sycGit2():
     # write work log
     logfilename="/root/sycGit.log";
