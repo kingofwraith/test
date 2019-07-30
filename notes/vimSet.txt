@@ -1,4 +1,4 @@
-#find file: /etc/vimrc
+#-find file: /etc/vimrc
 Add word follow the end of file.
 
 #sow line number
