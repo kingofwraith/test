@@ -8,8 +8,13 @@ startword=['#','>>>','>','\$'];
 # git pull
 def sycGit():
     commd="git pull origin master";
+    
     # write work log
-    worklog=open("/root/logs/sycGit.log","a");
+    logfilename="/root/logs/sycGit.log";
+    worklog=open(logfilename,"a");
+    #check time to logfile
+    os.system("echo '----------'>>"+logfilename+";date>>"+logfilename+";echo '------'>>"+logfilename);
+    
     # keywords of ssh_key
     key="_rsa";
     child=pexpect.spawn(commd);
