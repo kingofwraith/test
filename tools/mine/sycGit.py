@@ -26,7 +26,7 @@ def sycGit():
         child.logfile=worklog;
     worklog.close();
 
-# git push
+# git push;
 def sycGit2():
     # write work log
     logfilename="/root/logs/sycGit.log";
