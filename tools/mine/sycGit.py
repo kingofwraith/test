@@ -63,8 +63,17 @@ def sycGit2():
 
 
 def main():
-    #sycGit();
-    sycGit2();
+    tOption=None;
+    if len(sys.argv)>1:
+        tOption=sys.argv[1];
+    else:
+        print 'No option here';
+    
+    if tOption=='pull':
+        sycGit();
+    
+    if tOption=='push':
+        sycGit2();
 
 if __name__=='__main__':
     main();
