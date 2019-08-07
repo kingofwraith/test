@@ -5,6 +5,12 @@
     vi /etc/sysconfig/network 修改原hostname为
     newname , reboot重启后也生效
 
+#查看磁盘容量和占用率
+    磁盘主体容量
+        df -h
+    磁盘目录容量（inode）,inode关系到磁盘可创建文件的数目
+        df -ih
+
 #查看文件容量
     命令行：du -sh /root | sort -nr | more
 
