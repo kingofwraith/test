@@ -10,9 +10,9 @@
 
 #统计文件夹内数量
     不递归：
-        命令行：ls -l | grep '^-'| wc -l
+        命令行：ls -l | grep '^[-|d|l]'| wc -l
     递归一层：
-        命令行：ls -lR | grep '^-'| wc -l
+        命令行：ls -lR | grep '^[-|d|l]'| wc -l
 
 #统计计数命令：wc
     -l 统计行数
