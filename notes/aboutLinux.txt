@@ -10,7 +10,7 @@
     kill -l 查看命令编号意义
 
 #for strin strout strerr 服务器后台运行，并且ssh登出后不停止
-    #>nohup l -al 1>>logfile 2>&1 &
+    命令行：nohup l -al 1>>logfile 2>&1 &
 
 #查看时间
     date
@@ -18,5 +18,30 @@
 #查看日历
     cal
 
-#screen用法
-    #
+#谁登录了系统并执行了那些程序
+    命令行：w
+
+#交互式显示系统性能工具
+    命令行：nmon
+    命令行：saidar
+
+#查找挂载的文件系统
+    命令行：findmnt
+
+#基于网络接口的带宽监控
+    命令行：slurm -i eth1（或其他）
+
+#综合ifstat,iostat,dmstat等命令进行综合显示
+    命令行：dstat
+
+#替代netstat的命令行，ss（socket statistics）
+    命令行：ss
+        列出所有连接：ss | less
+        列出TCP流量：ss -A tcp
+        列出进程名和Pid：ss -ltp
+
+#日志美化工具
+    命令行：ccze
+        美化日志：cat /var/log/syslog | ccze
+        支持美化的日志列表：ccze -l
+        将日志保存为html文件：cat /var/log/syslog | ccze -h > /root/xxx.html
