@@ -5,6 +5,28 @@
     vi /etc/sysconfig/network 修改原hostname为
     newname , reboot重启后也生效
 
+#查看文件容量
+    命令行：du -sh /root | sort -nr | more
+
+#统计文件夹内数量
+    不递归：
+        命令行：ls -l | grep '^-'| wc -l
+    递归一层：
+        命令行：ls -lR | grep '^-'| wc -l
+
+#统计计数命令：wc
+    -l 统计行数
+    -w 统计字数
+    -c 统计字节
+
+#输出内容排序
+    命令行：sort -nr
+    选项：
+        -n 按数字大小
+        -r 反序
+        -d 只处理字母，数字，和空格
+        -i 忽略除了040到176意外的ASCII字符
+
 #结束进程
     kill -9 [pid]
     kill -l 查看命令编号意义
