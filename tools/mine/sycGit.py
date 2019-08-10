@@ -29,6 +29,7 @@ def sycGit():
         #catch the keywords and  send ssh_key
         child.sendline("sycsyc");
         child.logfile=worklog;
+        print ":: WORKED :: PWD OK";
     worklog.close();
 
 # git push;
