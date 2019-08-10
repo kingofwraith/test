@@ -6,7 +6,7 @@
     newname , reboot重启后也生效
 
 #kill processes
-    ps -ef | grep 'app'| awk '{print $3}' | xargs kill -9
+    ps -ef | grep 'app'| awk '{print $2}' | xargs kill -9
 
 #查看磁盘容量和占用率
     磁盘主体容量
