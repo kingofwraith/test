@@ -43,5 +43,6 @@ def main():
     if tOption=='vi':
         setVi();
 
+
 if __name__=='__main__':
     main();
