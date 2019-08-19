@@ -59,4 +59,44 @@ Add word follow the end of file.
     ctrl+r 恢复撤销的操作
 
 
+安装插件
+    
+    格式代码(插件管理器Vundle)
 
+    1.Set up Vundle:
+        git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+    2.Configure Plugins:在.vimrc文件中添加配置信息
+        set nocompatible              " be iMproved, required
+        filetype off                  " required
+
+        " set the runtime path to include Vundle and initialize
+        set rtp+=~/.vim/bundle/Vundle.vim
+        
+        call vundle#begin()
+        " alternatively, pass a path where Vundle should install plugins
+        "call vundle#begin('~/some/path/here')
+
+        " let Vundle manage Vundle, required
+        Plugin 'VundleVim/Vundle.vim'
+
+        " All of your Plugins must be added before the following line
+        call vundle#end()            " required
+        filetype plugin indent on    " required
+
+    3.运行安装：
+        在vim中，命令行，:PluginInstall
+        不在vim中时，外部命令 vim +PluginInstall +qall
+
+    操作
+    vim中命令行
+        :
+
+我挑的插件
+    connorholyday/vim-snazzy " snazzy字体
+    tomasr/molokai " molokai字体
+    altercation/vim-colors-solarized " solarized字体
+    vim-airline/vim-airline " 显示状态栏插件
+    scrooloose/nerdtree " 树状显示文件夹结构
+    majutsushi/tagbar " 显示当前声明的函数 类 变量
+    ycm-core/YouCompleteMe " 代码填充
