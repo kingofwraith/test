@@ -99,4 +99,9 @@ Add word follow the end of file.
     vim-airline/vim-airline " 显示状态栏插件
     scrooloose/nerdtree " 树状显示文件夹结构
     majutsushi/tagbar " 显示当前声明的函数 类 变量
+        需要依赖安装：yum install ctags
     ycm-core/YouCompleteMe " 代码填充
+    ctrlpvim/ctrlp.vim "文件搜索
+
+
+
