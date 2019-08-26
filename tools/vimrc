@@ -1,0 +1,45 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'connorholyday/vim-snazzy'
+Plugin 'vim-airline/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+"VIM set
+
+"""""""""""""
+"plugin theme
+"""""""""""""
+color snazzy
+
+""""""""""""""""
+"plugin nerdtree
+""""""""""""""""
+"打开vim自动加载
+"autocmd vimenter * NERDTree
+"调整快捷键
+nmap <F2> :NERDTreeToggle<CR>
+"关闭文件时自动关闭树
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+"文件树 显示隐藏文件
+let NERDTreeShowHidden=1
+
+""""""""""""""
+"plugin tagbar
+""""""""""""""
+"调增快捷键
+nmap <F3> :TagbarToggle<CR>
+"启动时自动focus
+let g:tagbar_autofocus = 1
+"开启自动预览(随着光标在标签上的移动，顶部会出现一个实时的预览窗口)
+"let g:tagbar_autopreview = 1
