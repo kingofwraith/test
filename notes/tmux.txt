@@ -1,0 +1,35 @@
+安装:
+    yum install -y tmux
+启动会话:
+    tmux new -s [自定会话名称]
+    会自动默认创建一个窗口
+快捷键前缀
+    默认 Ctrl + b，代号: prefix
+新建窗口:
+    prefix c
+暂退会话:
+    prefix d
+    或
+    直接关闭终端
+返回会话:
+    tmux attach-session -t [自定会话名称]
+    tmux attach-session 返回到最近使用的会话
+查询会话列表:
+    tmux ls
+
+创建窗口:
+    prefix c
+显示窗口列表:
+    prefix w
+关闭窗口当前窗口:
+    prefix &
+
+创建窗格
+    prefix % 水平方向
+    prefix " 垂直方向
+切换窗格
+    prefix 方向键
+显示窗格编号
+    prefix q
+关闭窗格
+    prefix x
