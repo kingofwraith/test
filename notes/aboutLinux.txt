@@ -23,6 +23,23 @@
     递归一层：
         命令行：ls -lR | grep '^[-|d|l]'| wc -l
 
+#调整命令名称&自定义命令名称
+    alias命令
+        1,先看看需要调整的命令时候存在
+            type [命令]
+        2,如果查询后不存在命令名称
+            去/etc/bashrc末尾添加：alias [命令]='[命令代表的复合指令]'
+            如把python命令用p进行别名处理:
+            alias p='python' 
+        3,如果查询后已经存在命令名称
+            用unalias命令删除已有的命令别名,如果/etc/bashrc中已添加永久指令需要把对应代码行删除
+            如删除P命令别名：
+            unalias p
+            同时删除/etc/bashrc中 alias p='python' 这一行
+        4,每次编辑保存/etc/bashrc后都需要
+            source /etc/bashrc
+            使其生效
+
 #统计计数命令：wc
     -l 统计行数
     -w 统计字数
