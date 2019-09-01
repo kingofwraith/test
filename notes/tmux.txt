@@ -16,6 +16,12 @@
     tmux attach-session 返回到最近使用的会话
 查询会话列表:
     tmux ls
+    prefix s 
+关闭会话
+    tmux kill-session 关闭上次会话
+    tmux kill-session -t [会话名称] 关闭指定xxx会话
+    tmux kill-server 关闭所有会话
+    tmux kill-session -a -t [会话名] 关闭除了xxx意外的会话
 
 创建窗口:
     prefix c
